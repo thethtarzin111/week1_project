@@ -18,6 +18,8 @@ function initializeCode() {
 
   addNoteButton.addEventListener("click", function () {
     const data = document.getElementById("data");
-    data.innerText = document.getElementById("note").value;
+    let newParagraph = document.createElement("li");
+    newParagraph.innerText = document.getElementById("note").value;
+    data.appendChild(newParagraph);
   });
 }
