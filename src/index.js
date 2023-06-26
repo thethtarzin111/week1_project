@@ -9,9 +9,15 @@ if (document.readyState !== "loading") {
 }
 
 function initializeCode() {
-  const addNoteButton = document.getElementById("my-button");
+  const changeButton = document.getElementById("my-button");
+  const addNoteButton = document.getElementById("add-data");
+  changeButton.addEventListener("click", function () {
+    console.log("Hello world");
+    document.getElementById("heading").innerHTML = "My Notebook";
+  });
 
   addNoteButton.addEventListener("click", function () {
-    console.log("Hello world");
+    const data = document.getElementById("data");
+    data.innerText = document.getElementById("note").value;
   });
 }
